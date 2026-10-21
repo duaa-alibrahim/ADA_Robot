@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101016">
+  <meta name="description" content="تعرّف إلى آدا، رفيق التعلم والتواصل، من خلال محاكي ثلاثي الأبعاد بتعبيرات وحركات وأنشطة تفاعلية باللغة العربية.">
+  <title>آدا — مختبر التفاعل</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<svg class="icon-sprite" aria-hidden="true"><defs>
+  <symbol id="i-spark" viewBox="0 0 24 24"><path d="m12 3 2.7 6.3L21 12l-6.3 2.7L12 21l-2.7-6.3L3 12l6.3-2.7L12 3Z"/><path d="M20 2v4M18 4h4"/></symbol>
+  <symbol id="i-play" viewBox="0 0 24 24"><path d="m9 5 11 7-11 7V5Z"/></symbol>
+  <symbol id="i-volume" viewBox="0 0 24 24"><path d="m11 4-6 5H2v6h3l6 5V4ZM15 8a6 6 0 0 1 0 8m3-11a10 10 0 0 1 0 14"/></symbol>
+  <symbol id="i-muted" viewBox="0 0 24 24"><path d="m11 4-6 5H2v6h3l6 5V4ZM16 9l6 6m0-6-6 6"/></symbol>
+  <symbol id="i-reset" viewBox="0 0 24 24"><path d="M3 10a9 9 0 1 1 2 8M3 4v6h6"/></symbol>
+  <symbol id="i-expand" viewBox="0 0 24 24"><path d="M9 3H3v6m12-6h6v6M3 15v6h6m12-6v6h-6"/></symbol>
+  <symbol id="i-camera" viewBox="0 0 24 24"><path d="M8 5 9.5 3h5L16 5h5v15H3V5h5Z"/><circle cx="12" cy="12" r="4"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M20 12H4m6-6-6 6 6 6"/></symbol>
+  <symbol id="i-close" viewBox="0 0 24 24"><path d="m6 6 12 12M6 18 18 6"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></symbol>
+  <symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 11v6m0-10v1"/></symbol>
+  <symbol id="i-eye" viewBox="0 0 24 24"><path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12Z"/><circle cx="12" cy="12" r="3"/></symbol>
+  <symbol id="i-hand" viewBox="0 0 24 24"><path d="M7 12V6a2 2 0 0 1 4 0v5-7a2 2 0 0 1 4 0v7-5a2 2 0 0 1 4 0v7l1-2a1.7 1.7 0 0 1 3 1l-3 7a5 5 0 0 1-5 3h-3c-2 0-3-1-4-3l-4-6c-1-2 1-3 2-2l1 1Z"/></symbol>
+  <symbol id="i-book" viewBox="0 0 24 24"><path d="M12 5C8 2 3 3 2 4v15c3-2 7-1 10 1 3-2 7-3 10-1V4c-3-2-7-1-10 1Zm0 0v15"/></symbol>
+  <symbol id="i-move" viewBox="0 0 24 24"><path d="M12 2v20M2 12h20M8 6l4-4 4 4M8 18l4 4 4-4M6 8l-4 4 4 4M18 8l4 4-4 4"/></symbol>
+</defs></svg>
+<header class="topbar">
+  <a class="brand" href="./" aria-label="آدا، الصفحة الرئيسية"><span class="brand-mark"><svg><use href="#i-spark"/></svg></span><span class="brand-name">ADA<span>آدا · إننا نهمس بالأمل</span></span></a>
+  <nav aria-label="التنقل الرئيسي"><button class="nav-link active" id="nav-sim">المحاكي التفاعلي<span></span></button><button class="nav-link" data-open="about">عن آدا</button><button class="nav-link" data-open="guide">دليل العرض <span class="small-arrow">↗</span></button></nav>
+  <div class="header-actions"><button class="sound-test-btn" id="test-sound"><svg class="icon"><use href="#i-volume"/></svg>تجربة الصوت</button><button class="presentation-btn" id="start-tour"><svg class="icon"><use href="#i-play"/></svg>عرض للجنة</button></div>
+</header>
+<main>
+  <div class="page-heading"><div><div class="eyebrow" dir="ltr"><span></span> ADA INTERACTION LAB <small>/ 01</small></div><h1>تواصل صغير. <span>أثر كبير.</span></h1><p>اقترب من آدا. واكتشف كيف تتحوّل المشاعر إلى لحظات تواصل.</p></div><div class="ready"><span class="status-dot"></span>بيئة المحاكاة جاهزة<small>نموذج تصوّري تفاعلي</small></div></div>
+  <div class="workspace">
+    <section class="simulator" aria-label="استوديو آدا ثلاثي الأبعاد">
+      <div class="stage" id="stage">
+        <div class="stage-grain"></div><div class="stage-word" aria-hidden="true">ADA</div>
+        <div class="stage-head"><div class="live-label" dir="ltr"><span class="status-dot"></span> LIVE SIMULATION</div><span class="stage-title">آدا <span>/</span> رفيق التعلّم والتواصل</span></div>
+        <canvas id="robot-canvas" aria-label="نموذج آدا ثلاثي الأبعاد. اسحب لتدويره، واستخدم مفاتيح الأسهم لتغيير زاوية المشهد." tabindex="0"></canvas>
+        <div class="loading" id="loading"><div class="loader"></div>نوقظ آدا…</div>
+        <div class="model-callout"><span class="callout-line"></span><small>EXPRESSION ENGINE</small><strong id="model-mood">تعبير الترحيب</strong></div>
+        <div class="view-switch" aria-label="زاوية المشاهدة"><button data-view="front" class="selected">أمامي</button><button data-view="three">ثلاثي الأبعاد</button><button data-view="side">جانبي</button></div>
+        <div class="orbit-hint"><svg class="icon"><use href="#i-move"/></svg>اسحب لاستكشاف آدا <span>·</span> مرّر للتقريب</div>
+        <div class="speech" aria-live="polite"><span class="speech-icon"><svg class="icon"><use href="#i-spark"/></svg></span><div><span class="speech-label">آدا تقول <span class="voice-state" id="voice-state">جاهزة للتواصل</span></span><p id="speech-text">مرحبًا، أنا آدا! يسعدني أن أكون صديقتك. كيف تشعر اليوم؟</p></div><button class="icon-btn" id="replay" aria-label="إعادة نطق رسالة آدا"><svg class="icon"><use href="#i-volume"/></svg></button></div>
+        <div class="audio-recovery" id="audio-recovery" hidden><span id="audio-recovery-message"></span><audio id="ada-audio" controls preload="auto" playsinline src="./audio/phrase-00.m4a" aria-label="صوت آدا"></audio></div>
+        <div class="stage-toolbar"><div class="stage-caption"><span class="pulse-ring"></span><span id="robot-state">في انتظار تفاعل صغير</span></div><div class="tool-buttons"><button class="icon-btn" id="sound-toggle" aria-label="كتم الصوت" aria-pressed="true"><svg class="icon"><use href="#i-volume"/></svg></button><button class="icon-btn" id="reset-view" aria-label="إعادة المشهد"><svg class="icon"><use href="#i-reset"/></svg></button><button class="icon-btn" id="capture" aria-label="حفظ صورة آدا"><svg class="icon"><use href="#i-camera"/></svg></button><button class="icon-btn" id="fullscreen" aria-label="ملء الشاشة"><svg class="icon"><use href="#i-expand"/></svg></button></div></div>
+        <div class="tour-overlay" id="tour-overlay" hidden><div class="tour-top"><span>عرض آدا للجنة</span><button class="icon-btn" id="end-tour" aria-label="إنهاء العرض"><svg class="icon"><use href="#i-close"/></svg></button></div><div class="tour-progress"><i></i><i></i><i></i><i></i></div><span class="tour-step" id="tour-step">01 / 04</span><h2 id="tour-title"></h2><p id="tour-copy"></p><button class="primary-btn" id="tour-next">التالي <svg class="icon"><use href="#i-arrow"/></svg></button></div>
+      </div>
+      <div class="telemetry" aria-label="حالة المحاكي"><div><span class="metric-label"><i class="tiny-dot purple"></i>الحالة التعبيرية</span><strong id="metric-emotion">ترحيب <small>WELCOME</small></strong></div><div><span class="metric-label"><i class="tiny-dot cyan"></i>اتجاه الرأس</span><strong dir="ltr" id="metric-angle">0° <small>YAW</small></strong></div><div><span class="metric-label"><i class="tiny-dot green"></i>تفاعلات الجلسة</span><strong dir="ltr"><span id="metric-count">00</span> <small>INTERACTIONS</small></strong></div><div><span class="metric-label"><i class="tiny-dot amber"></i>محرّك الحركة</span><strong>نشط <span class="mini-wave"><i></i><i></i><i></i><i></i><i></i></span></strong></div></div>
+    </section>
+    <aside class="control-panel" aria-label="لوحة التفاعل">
+      <div class="panel-title"><span><svg class="icon"><use href="#i-spark"/></svg> مساحة التفاعل</span><span class="panel-index" dir="ltr">CONTROL / 01</span></div>
+      <div class="panel-tabs" role="tablist" aria-label="أدوات المحاكاة"><button role="tab" aria-selected="true" aria-controls="interaction-panel" id="interaction-tab" data-tab="interaction">التفاعل</button><button role="tab" aria-selected="false" aria-controls="learning-panel" id="learning-tab" data-tab="learning">التعلّم</button><button role="tab" aria-selected="false" aria-controls="motion-panel" id="motion-tab" data-tab="motion">الحركة</button></div>
+      <div class="tab-content" id="interaction-panel" role="tabpanel" aria-labelledby="interaction-tab">
+        <h2>كيف يشعر صديقنا؟</h2><p class="panel-subtitle">اختر شعور الطفل، وشاهد استجابة آدا.</p>
+        <div class="emotion-grid" id="emotion-grid">
+          <button class="emotion selected" data-emotion="happy" aria-pressed="true"><span class="emotion-face happy"><i></i><i></i><b></b></span><strong>سعيد</strong><small>شارك الفرحة</small><span class="selection-check">✓</span></button>
+          <button class="emotion" data-emotion="sad" aria-pressed="false"><span class="emotion-face sad"><i></i><i></i><b></b></span><strong>حزين</strong><small>قليل من الطمأنينة</small><span class="selection-check">✓</span></button>
+          <button class="emotion" data-emotion="surprised" aria-pressed="false"><span class="emotion-face surprised"><i></i><i></i><b></b></span><strong>مندهش</strong><small>لحظة اكتشاف</small><span class="selection-check">✓</span></button>
+          <button class="emotion" data-emotion="calm" aria-pressed="false"><span class="emotion-face calm"><i></i><i></i><b></b></span><strong>يحتاج للهدوء</strong><small>نأخذ نفسًا معًا</small><span class="selection-check">✓</span></button>
+        </div>
+        <div class="response-preview"><div><span class="tiny-dot purple"></span> استجابة آدا المتوقعة <svg class="icon"><use href="#i-spark"/></svg></div><p id="response-description">عينان مبتسمتان، ميل لطيف للرأس، وكلمات تشارك الطفل فرحته.</p><div class="response-tags" id="response-tags"><span>ابتسامة</span><span>حركة مشجعة</span><span>صوت ودود</span></div></div>
+        <button class="primary-btn interact-btn" id="interact"><svg class="icon"><use href="#i-play"/></svg>ابدأ التفاعل <span class="btn-shortcut">↵</span></button><p class="input-note"><span class="tiny-dot"></span>إدخال تمثيلي للشعور · لا تُستخدم الكاميرا</p>
+      </div>
+      <div class="tab-content" id="learning-panel" role="tabpanel" aria-labelledby="learning-tab" hidden><h2>نتعلّم، خطوة بخطوة.</h2><p class="panel-subtitle">أنشطة تصوّر كيف يمكن لآدا دعم التعلّم.</p><div class="activity-picker"><button data-activity="colors" class="selected"><span>◉</span>الألوان</button><button data-activity="feelings"><span>☺</span>المشاعر</button><button data-activity="breathing"><span>◎</span>الهدوء</button></div><div class="activity-area" id="activity-area"></div><p class="input-note">أمثلة تعليمية في المحاكي، بإشراف الأهل أو المختص.</p></div>
+      <div class="tab-content" id="motion-panel" role="tabpanel" aria-labelledby="motion-tab" hidden><h2>خلف كل تعبير، حركة.</h2><p class="panel-subtitle">استكشف حركة الرأس وآلية التعبير.</p><div class="range-control"><label for="yaw">التفات الرأس <output id="yaw-output" dir="ltr">0°</output></label><input type="range" id="yaw" min="-40" max="40" value="0"><div><span>يسار</span><span>يمين</span></div></div><div class="range-control"><label for="pitch">ميل الرأس <output id="pitch-output" dir="ltr">0°</output></label><input type="range" id="pitch" min="-20" max="20" value="0"><div><span>أعلى</span><span>أسفل</span></div></div><label class="toggle-row"><span><strong>تتبّع المؤشر</strong><small>عينا آدا تتابعان حركتك داخل المشهد</small></span><input id="gaze" type="checkbox" checked><span class="switch"></span></label><label class="toggle-row"><span><strong>استكشاف الهيكل</strong><small>إظهار شبكة النموذج ثلاثي الأبعاد</small></span><input id="wireframe" type="checkbox"><span class="switch"></span></label><button class="secondary-btn" id="reset-motion"><svg class="icon"><use href="#i-reset"/></svg>إعادة الحركة الافتراضية</button><p class="input-note">الزوايا في المحاكي تصوّرية وليست مواصفات للمحركات الفعلية.</p></div>
+      <div class="session-log"><div class="log-heading"><span>سجل اللحظات</span><span class="log-live"><span class="status-dot"></span>هذه الجلسة</span></div><ol id="event-log" aria-live="polite"><li><span class="log-dot"></span><span>آدا هنا، ومستعدة للتواصل.</span><time dir="ltr">00:00</time></li></ol></div>
+    </aside>
+  </div>
+  <section class="journey" aria-label="كيف يعمل آدا"><div class="journey-intro"><span class="eyebrow">فكرة آدا، في ثلاث لحظات</span><h2>يرى. يتفاعل. يقرّبنا.</h2></div><div class="journey-item"><span class="step-number">01</span><div><h3><svg class="icon"><use href="#i-eye"/></svg> يفهم التعبير</h3><p>تبدأ الفكرة بملاحظة تعابير الطفل عبر كاميرا ذكية.</p></div></div><div class="journey-item"><span class="step-number">02</span><div><h3><svg class="icon"><use href="#i-spark"/></svg> يستجيب بلطف</h3><p>حركة وتعبير وصوت يشجّعون على التفاعل.</p></div></div><div class="journey-item"><span class="step-number">03</span><div><h3><svg class="icon"><use href="#i-book"/></svg> يدعم التعلّم</h3><p>أنشطة بسيطة، بالتعاون مع الأهل والأخصائيين.</p></div></div></section>
+  <footer><p><span class="footer-logo">ADA</span>إننا نهمس بالأمل <span>·</span> محاكاة تصوّرية لمشروع قيد التطوير</p><a href="https://program2.syrian-technocrats.org/p/ada" target="_blank" rel="noopener noreferrer">اكتشف المشروع الأصلي <span>↗</span></a></footer>
+</main>
+<dialog id="about-dialog"><div class="dialog-head"><span class="eyebrow">MEET ADA</span><button class="icon-btn" data-close aria-label="إغلاق"><svg class="icon"><use href="#i-close"/></svg></button></div><h2>تقنية أقرب إلى الإنسان.</h2><p class="dialog-lead">آدا رفيق روبوتي قيد التطوير لدعم الأطفال في التعلّم والتواصل والتفاعل بثقة ومتعة.</p><div class="about-block"><h3>من أجل لحظات تواصل أجمل</h3><p>يهتم المشروع خصوصًا بالأطفال من ذوي متلازمة داون واضطراب طيف التوحد. يجمع رؤيته بين كاميرا ذكية والذكاء الصنعي والصوت وحركات الوجه، مع التركيز على دعم اللغة العربية.</p></div><div class="about-columns"><div><span class="badge">في هذه التجربة</span><p>نموذج تصوّري ثلاثي الأبعاد، استجابات مبرمجة لمشاعر مختارة، صوت عربي مضمّن وأنشطة تعليمية توضيحية. لا يتصل بروبوت فعلي ولا يحلّل الوجوه.</p></div><div><span class="badge muted">آفاق مستقبلية للمشروع</span><p>تمارين مساندة للنطق، تعلّم اللغات، ودعم كبار السن ومرضى الزهايمر؛ اتجاهات مطروحة وليست قدرات مثبتة للمرحلة الحالية.</p></div></div><p class="care-note">آدا أداة مساندة للأهل والمختصين. الأنشطة هنا للعرض والتجربة، وليست تقييمًا أو علاجًا.</p><div class="creator"><div class="creator-initial">د</div><div><strong>دعاء عبد المجيد الابراهيم</strong><span>مطوّرة المشروع · هندسة ميكاترونيكس</span></div><a href="https://program2.syrian-technocrats.org/p/ada" target="_blank" rel="noopener noreferrer">صفحة المشروع ↗</a></div><p class="small-print">استندت معلومات المشروع إلى صفحته في ملتقى عبور. الشكل ثلاثي الأبعاد تفسير بصري للرسم المنشور، وليس نموذجًا هندسيًا معتمدًا.</p></dialog>
+<dialog id="guide-dialog"><div class="dialog-head"><span class="eyebrow">PRESENTATION GUIDE</span><button class="icon-btn" data-close aria-label="إغلاق"><svg class="icon"><use href="#i-close"/></svg></button></div><h2>دع آدا تحكي فكرتها.</h2><p class="dialog-lead">مسار قصير وموجّه للعرض أمام اللجنة، مع إمكانية الاستكشاف الحر في أي وقت.</p><div class="guide-list"><div><span>01</span><p><strong>التعارف</strong>قدّم آدا ورؤيتها الإنسانية.</p></div><div><span>02</span><p><strong>التفاعل العاطفي</strong>شاهد كيف تقابل آدا الحزن بالطمأنينة.</p></div><div><span>03</span><p><strong>التعلّم باللعب</strong>جرّب نشاط الألوان واستجابة التشجيع.</p></div><div><span>04</span><p><strong>من النموذج إلى الواقع</strong>اعرض نطاق المحاكاة واتجاه المشروع.</p></div></div><p class="care-note">الصوت العربي مضمّن في الموقع، ويبدأ عند الضغط على التفاعل أو بدء العرض. استخدم «تجربة الصوت» قبل التقديم، وأيقونة السماعة للكتم. كل الرسائل متاحة نصيًا أيضًا.</p><button class="primary-btn" id="guide-start"><svg class="icon"><use href="#i-play"/></svg>ابدأ العرض الموجّه</button></dialog>
+<div class="toast" id="toast" role="status"></div>
+<script type="module" src="app.js"></script>
+</body></html>
